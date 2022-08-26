@@ -1,0 +1,24 @@
+<section class="welcome">
+    <h3>Hello! {{userName}}! We are happy to see you here..!</h3>
+    <form>
+        <label>UserName:
+            <input type="text" name="tb1" [(ngModel)]="userName" />
+        </label>
+        <input type="range" name="fc2" [(ngModel)]="logoWidth" min="20" max="500" />
+        <label>
+            <input type="checkbox" name="c1" [(ngModel)]="isCentered"/>Align Center
+        </label>
+        <label>
+            <input type="checkbox" name="c2" [(ngModel)]="isBordered"/>Apply Borders
+        </label>
+    </form>
+
+    <div>
+        <img 
+            [src]="logos[logoIndex]"
+            [style.width.px]="logoWidth"
+            [class.centered]="isCentered"
+            [class.bordered]="isBordered"
+            (click)="toggle()" />
+    </div>
+</section>

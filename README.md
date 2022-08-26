@@ -205,6 +205,54 @@ Angular
                 ng g component ComponentName --skip-tests
                 ng g c ComponentName --skip-tests
 
+                Data Binding
+                    Interpolation
+                        {{angular-expression}}
+
+                    Two-Way Data Binding
+                        is designed to accept data from a form-control
+
+                        'ngModel' is an attribute directive for all form-controls.
+
+                        'ngModel' is from 'FormsModule' from '@angular/forms'.
+
+                        <input type="text" [(ngModel)]="field" name="fc1" />
+
+                    One-Way Data Binding
+
+                        Attribute Binding
+                            to assign the value of a field or angular-expression to
+                            an attribute in a tag.
+
+                            [attribute]="angular-expression"
+
+                        Style Binding
+                            to assign the value of a field or angular-expression to
+                            a style property in a tag.
+
+                            [style.property]="angular-expression"
+
+                        CSS class Binding
+
+                            to switch on or off a css-class
+
+                            [class.cssClassName]="boolean-angular-expression"
+                    
+                    Event Binding
+
+                        to invoke a method when an event occurs.
+
+                        (eventDirective)="method()"
+
+                        html event attributes                   eventDirective
+                            onclick                                 click
+                            onblur                                  blur
+                            onmouseover                             mouseover
+                            onchange                                change
+                            onfocus                                 focus
+                            onkeypress                              keypress
+                            ...
+                            onSubmit                                ngSubmit
                 
         Pipes
                 @Pipe({

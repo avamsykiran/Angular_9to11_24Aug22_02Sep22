@@ -1,0 +1,39 @@
+<section class="pd">
+    <h4>String Pipes</h4>
+    <div>
+        <strong>Original Data: {{strData}}</strong><br/>
+        {{strData|uppercase}}<br />
+        {{strData|lowercase}}<br />
+        {{strData|titlecase}}<br />
+    </div>
+
+    <h4>Currency Pipes</h4>
+    <div>
+        <strong>Original Data: {{numData}}</strong><br/>
+        {{numData|currency:'INR'}}<br />
+        {{numData|currency:'JPY'}}<br />
+        {{numData|currency:'USD'}}<br />
+        {{numData|currency:'AUD'}}<br />
+        {{numData|currency:'GBP'}}<br />
+        {{numData|currency:'ABC'}}<br />
+    </div>
+
+    <h4>Number Pipe</h4>
+    <div>
+        <strong>Original Data: {{numData}}</strong><br/>
+        {{numData|number:'4.0-0'}}<br />
+        {{numData|number:'4.2-2'}}<br />
+        {{numData|number:'4.2-4'}}<br />
+        {{numData|number:'6.2-4'}}<br />       
+    </div>
+
+    <h4>Date Pipe</h4>
+    <div>
+        <strong>Original Data: {{dateData}}</strong><br/>
+        {{dateData|date:'short'}}<br />
+        {{dateData|date:'long'}}<br />
+        {{dateData|date:'dd-MM-yy'}}<br />
+        {{dateData|date:'dd-MMM-yyyy hh:mm:ss a'}}<br />
+        {{dateData|date:'dd-MMMM-yyyy HH:mm:ss'}}<br />
+    </div>
+</section>

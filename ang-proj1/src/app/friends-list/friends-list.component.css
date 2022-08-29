@@ -1,0 +1,14 @@
+.frds{
+    background-color: #fafaff;
+}
+
+.frds>form,frds>p,frds>ol{
+    margin:10px;
+    padding:5px;
+}
+
+label,button{
+    display: inline-block;
+    width:30%;
+    margin:5px;
+}

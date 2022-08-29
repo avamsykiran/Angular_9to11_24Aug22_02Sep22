@@ -105,6 +105,14 @@ Angular
         proj-name\> ng build                build,bundle and the output bundles are saved in /dist
         proj-name\> ng test                 build and executes the test cases in our project.
 
+        proj-name\> ng g module ModuleName 
+        proj-name\> ng g c ComponentName --skip-tests
+        proj-name\> ng g directive DrirectiveName --skip-tests
+        proj-name\> ng g service ServiceName --skip-tests
+        proj-name\> ng g pipe PipeName --skip-tests
+        proj-name\> ng g class ClassName --skip-tests
+        proj-name\> ng g interface InterfaceName
+
     Angular Archetecture
     -----------------------------------------------------
 
@@ -254,13 +262,36 @@ Angular
                             ...
                             onSubmit                                ngSubmit
                 
-        Pipes
-                @Pipe({
-                    name:'intoWords'
-                })
-                class IntoWordsPipe{}
         Services
+                is a typescript class that provides bussiness logic like
+                computations or calicualtions or restapi communication or
+                state management across components ...etc.,
+
+                Ans these services are injectable into components, directives and
+                other services.
+
                 @Injectable({
                     providedIn:'root'
                 })
                 class EmployeeService{}
+
+        Pipes
+
+            is used to tranform a value into another value
+            just before it is rendered.
+
+            inbuilt pipes
+                lowercase
+                uppercase
+                titlecase
+                number
+                currency
+                date
+
+            Custome pipe
+                @Pipe({
+                    name:'intoWords'
+                })
+                class IntoWordsPipe{}
+
+      

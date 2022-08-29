@@ -1,0 +1,19 @@
+<section class="frds">
+    <form (ngSubmit)="add()">
+        <label>Friend Name:
+            <input type="text" name="tb1" [(ngModel)]="friend.friendName" />
+        </label>
+        <label>Age:
+            <input type="number" name="tb2" [(ngModel)]="friend.age" />
+        </label>
+        <button>ADD</button>
+    </form>
+
+    <p *ngIf="!friends || friends.length==0">
+        <strong>No friends as of now</strong>
+    </p>
+
+    <ol *ngIf="friends && friends.length>0">
+        <li *ngFor="let f of friends" [appAgeGroup]="f.age">{{f.friendName}} is of age {{f.age}} years</li>
+    </ol>
+</section>

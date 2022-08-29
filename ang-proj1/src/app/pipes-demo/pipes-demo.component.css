@@ -1,0 +1,9 @@
+.pd{
+    background-color: #aaaaac;
+}
+
+.pd>div{
+    columns: 2;
+    border-bottom: .5px dashed #000000;
+    padding:10px;
+}

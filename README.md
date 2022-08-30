@@ -294,4 +294,79 @@ Angular
                 })
                 class IntoWordsPipe{}
 
-      
+    Bootstrap 5 Integration
+    ----------------------------------------------------
+
+        npm install bootstrap --save
+
+        node_modules/bootstrap/dist/css/bootstrap.css
+        node_modules/bootstrap/dist/js/bootstrap.js
+
+        angular.json
+            styles:[]       include the css file
+            scripts:[]      include the js file
+
+    Angular Routing
+    --------------------------------------------------
+
+        allow you to render a component based on the url-path.
+
+        RoutingModule       from '@angular/raouter'
+
+            Route
+                            {
+                                path:'',
+                                component:Component,
+                                children:[],
+                                pathMatch:'full|startsWith',
+                                redirectTo:''
+                            }
+            
+            Routes          Route[]
+
+            Router          navigateByUrl('')
+
+            router-outlet   is a built-in component that is replaced by the component 
+                            whose path matches witht he url.
+
+            routerLink      is an attribute directive for 'a' tag, used to hold the target path.
+
+            forRoot         is a function used to load the paths into the RouterModule.
+
+    Json Server
+    ---------------------------------------------
+
+        Json-server is a javascript tool or library that generates
+        rest api based on a .json file.
+
+        create any nodejs project
+        npm install json-server --save
+        json-server --watch data.json --port 9999
+
+    HttpClient
+    ----------------------------------------------
+
+        is a rest client library coming from 
+        HttpClientModule of '@angular/common/http'
+
+        HttpClient
+            get(url)    : Observble
+            post(url,reqBody) : Observble
+            put(url,reqBody) :Observable
+            delete(url): Observble
+
+
+        Observble is a class from 'rxjs' framewokr.
+
+        it acts like a bridge of communcation between asycn job and a front-end
+
+        each observable encapsulates an asynchronous job.
+
+        let ob = httpClient.get("http://localhost:9999/emps");
+
+        ob.subscribe({
+            next:   data => {/*we shall do what ever we want to do witht he data*/ },
+            error:  err => {/*error handling */ }
+        });
+
+

@@ -369,4 +369,16 @@ Angular
             error:  err => {/*error handling */ }
         });
 
+Assignment - Invnetory Management System
+-----------------------------------------------------------
 
+SPA angular app: that enable CRUD on 'Product' entity.
+
+    Product 
+        {
+            id:101,
+            title:'A4 Sheets Bundle',
+            unit:'bundle',
+            rate:870.0,
+            packageDate:'2022-01-01'
+        }

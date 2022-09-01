@@ -6,7 +6,7 @@ import { Employee } from './employee';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeServiceService {
+export class EmployeeService {
 
   apiUrl:string;
 

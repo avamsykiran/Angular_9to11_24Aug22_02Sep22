@@ -1,1 +1,35 @@
-<p>employees-list works!</p>
+<div class="col-sm-11 p-4">
+    <h4>Employees</h4>
+
+    <p class="alert alert-info p-4" *ngIf="!emps && !errMsg">
+        <strong>Please wait while loading...</strong>
+    </p>
+
+    <p class="alert alert-info p-4" *ngIf="emps && emps.length==0">
+        <strong>No Records To Display!</strong>
+    </p>
+
+    <p class="alert alert-danger p-4" *ngIf="errMsg">
+        <strong>{{errMsg}}</strong>
+    </p>
+
+    <table *ngIf="emps && emps.length>0" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Employee#</th>
+                <th>Full Name</th>
+                <th>Salary</th>
+                <th>Join Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of emps">
+                <td class="text-end">{{e.id|number:'3.0-0'}}</td>
+                <td> {{e.fullName|uppercase}}</td>
+                <td class="text-end">{{e.basicPay|currency:'INR'}}</td>
+                <td class="text-center">{{e.joinDate|date:'dd-MMM-yyyy'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

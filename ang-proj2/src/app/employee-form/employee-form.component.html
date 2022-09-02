@@ -1,1 +1,39 @@
-<p>employee-form works!</p>
+<div class="col-sm-5 mx-auto p-4">
+
+    <h4>Employee</h4>
+
+    <p class="alert alert-danger" *ngIf="errMsg">
+        <strong>{{errMsg}}</strong>
+    </p>
+
+    <form (ngSubmit)="save()" #f="ngForm">
+        <div>
+            <label>Employee Id</label>
+            <input type="number" name="tb1" [(ngModel)]="emp.id" readonly class="form-control"/>
+        </div>
+        <div>
+            <label>Full Name</label>
+            <input type="text" name="tb2" [(ngModel)]="emp.fullName" required class="form-control" #fnm="ngModel"/>
+            <div class="alert alert-danger" *ngIf="fnm.invalid">
+                <p>Full Name can not be left blank</p>
+            </div>
+        </div>
+        <div>
+            <label>Basic Pay</label>
+            <input type="number" name="tb3" [(ngModel)]="emp.basicPay" required class="form-control" #bp="ngModel"/>
+            <div class="alert alert-danger" *ngIf="bp.invalid">
+                <p>Basic Pay can not be left blank</p>
+            </div>
+        </div>
+        <div>
+            <label>Join Date</label>
+            <input type="date" name="tb4" [(ngModel)]="joinDateStr" required class="form-control" #jd="ngModel"/>
+            <div class="alert alert-danger" *ngIf="jd.invalid">
+                <p>Join Date can not be left blank</p>
+            </div>
+        </div>
+        <div class="text-end mt-3">
+            <button class="btn btn-sm btn-primary" [disabled]="f.invalid">SAVE</button>
+        </div>
+    </form>
+</div>

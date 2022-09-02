@@ -17,18 +17,6 @@
       "fullName": "Srinu",
       "basicPay": 55000,
       "joinDate": "2022-02-01"
-    },
-    {
-      "id": 4,
-      "fullName": "Sagar",
-      "basicPay": 45000,
-      "joinDate": "2022-03-01"
-    },
-    {
-      "fullName": "Lavanya",
-      "basicPay": 55000,
-      "joinDate": "2022-03-01",
-      "id": 5
     }
   ]
 }
